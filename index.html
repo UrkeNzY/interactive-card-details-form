@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section id="left-section">
+        <img
+          id="main-background"
+          src="images/bg-main-desktop.png"
+          alt="main desktop background"
+        />
+        <img
+          id="card-front"
+          src="images/bg-card-front.png"
+          alt="card front image"
+        />
+        <img
+          id="card-back"
+          src="images/bg-card-back.png"
+          alt="card back image"
+        />
+      </section>
+
+      <section id="card-info-section">
+        <p id="front-digits">0000 0000 0000 0000</p>
+        <p id="front-name">Jane Appleseed</p>
+        <p id="front-expiry-date">
+          <span id="months-span">00</span>/<span id="years-span">00</span>
+        </p>
+        <p id="back-cvc">000</p>
+        <p id="front-circle-fill"></p>
+        <p id="front-circle-outline"></p>
+      </section>
+
+      <section id="right-section">
+        <form id="form-panel">
+          <label for="cardholder-name">Cardholder Name</label>
+          <input
+            type="text"
+            id="cardholder-name"
+            class="new-line-input"
+            name="cardholder-name"
+            placeholder="e.g. Jane Appleseed"
+            required
+          />
+
+          <label for="card-number">Card Number</label>
+          <input
+            type="tel"
+            id="card-number"
+            name="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            pattern="\d*"
+            maxlength="28"
+            required
+          />
+
+          <div id="date-and-cvc">
+            <div>
+              <label>Exp. Date (MM/YY)</label>
+              <input
+                id="expiry-date-mm"
+                class="months"
+                type="tel"
+                placeholder="MM"
+                maxlength="2"
+                required
+              />
+              <input
+                id="expiry-date-yy"
+                class="years"
+                type="tel"
+                placeholder="YY"
+                maxlength="2"
+                required
+              />
+            </div>
+
+            <div>
+              <label>CVC</label>
+              <input
+                id="cvc"
+                type="tel"
+                placeholder="e.g. 123"
+                maxlength="3"
+                required
+              />
+            </div>
+          </div>
+          <p id="error-message"></p>
+          <button id="confirm-button">Confirm</button>
+        </form>
+
+        <div id="completed-state-panel">
+          <img src="images/icon-complete.svg" alt="success checkmark" />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button id="continue-button">Continue</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

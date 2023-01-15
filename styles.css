@@ -1,0 +1,262 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+}
+
+#main-background {
+  height: 100vh;
+}
+
+#card-front,
+#card-back {
+  position: absolute;
+}
+
+#card-front {
+  top: 14.66rem;
+  left: 12rem;
+}
+
+#front-digits {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  position: absolute;
+  top: 21.8rem;
+  left: 15.53rem;
+}
+
+#front-name {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.13rem;
+  position: absolute;
+  top: 26.67rem;
+  left: 15.53rem;
+}
+
+#front-expiry-date {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.13rem;
+  position: absolute;
+  top: 26.66rem;
+  left: 36.33rem;
+}
+
+#front-circle-fill {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 15.33rem;
+  left: 15.53rem;
+  width: 3.33rem;
+  height: 3.33rem;
+  border-radius: 50%;
+}
+
+#front-circle-outline {
+  width: 1.66rem;
+  height: 1.66rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  position: absolute;
+  top: 16.2rem;
+  left: 20rem;
+}
+
+#card-back {
+  top: 33.3rem;
+  left: 18.66rem;
+}
+
+#back-cvc {
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  position: absolute;
+  top: 39.67rem;
+  left: 42.67rem;
+}
+
+#right-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-left: 36.67rem;
+}
+
+form {
+  width: 23.33rem;
+  display: block;
+}
+
+#completed-state-panel {
+  width: 20rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#completed-state-panel img {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+#completed-state-panel p {
+  color: hsl(279, 6%, 55%);
+}
+
+label {
+  margin-bottom: 0.47rem;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 0.67rem;
+  margin-bottom: 1.33rem;
+  box-sizing: border-box;
+  font: inherit;
+  border-radius: 5px;
+  border: solid 1px hsl(270, 3%, 87%);
+}
+
+input:focus {
+  outline: none !important;
+  border: solid 2px hsl(278, 94%, 30%);
+}
+
+input.error {
+  border: solid 2px hsl(0, 100%, 66%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#date-and-cvc {
+  display: flex;
+  justify-content: space-between;
+}
+
+#expiry-date-mm,
+#expiry-date-yy {
+  width: 60px;
+}
+
+#expiry-date-yy {
+  margin-left: 0.3rem;
+}
+
+#cvc {
+  width: 12.66rem;
+}
+
+button {
+  width: 100%;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  margin-top: 1.33rem;
+  padding: 0.67rem 3.33rem;
+  border-radius: 5px;
+  font: inherit;
+  border: none;
+}
+
+#error-message {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: hsl(0, 100%, 66%);
+  position: relative;
+  top: -0.67rem;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  #main-background {
+    content: url(images/bg-main-mobile.png);
+    height: auto;
+    width: 100vw;
+  }
+
+  #right-section {
+    margin: 0 auto;
+    height: 70vh;
+  }
+
+  #card-front {
+    top: 8rem;
+    left: 1.33rem;
+    width: 20rem;
+    z-index: 1;
+  }
+
+  #card-back {
+    top: 1.767rem;
+    left: 3.67rem;
+    width: 20rem;
+  }
+
+  #front-digits {
+    font-size: 1.467rem;
+    top: 12.53rem;
+    left: 3.13rem;
+    z-index: 1;
+  }
+
+  #front-name {
+    font-size: 0.93rem;
+    top: 15.67rem;
+    left: 3.13rem;
+    z-index: 1;
+  }
+
+  #front-expiry-date {
+    font-size: 0.93rem;
+    top: 15.67rem;
+    left: 17rem;
+    z-index: 1;
+  }
+
+  #front-circle-fill {
+    top: 8.33rem;
+    left: 2.867rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    z-index: 1;
+  }
+
+  #front-circle-outline {
+    width: 1rem;
+    height: 1rem;
+    top: 8.8rem;
+    left: 5.867rem;
+    z-index: 1;
+  }
+
+  #back-cvc {
+    font-size: 0.8rem;
+    top: 5.867rem;
+    left: 19.53rem;
+  }
+}
